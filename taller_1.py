@@ -1,4 +1,3 @@
-
 """
     Taller # 1 lenguaje de programación 2
     Fernando García Guiral
@@ -73,7 +72,7 @@ def ingresar_opcion(menu):
                     resistencia = float(resistencia_ohmios())
                     r_cto += resistencia
                     impresion = f'{fuente + voltaje}|->-|-{serie + str(resistencia)}|->-'
-                    #impresiones.append(impresion)                    
+                    impresiones.append(impresion)                    
                     print(impresion)
                     break
                 elif opcion == 'b':
@@ -84,7 +83,7 @@ def ingresar_opcion(menu):
                     print(f'{fuente + voltaje}|->-|-{paralelo + str(r_total)}|->-')
                     break
                 else:
-                    return impresiones
+                    return r_cto
                     
 menu = """
 ¿ Qué va conectado a continuación?:
@@ -95,13 +94,13 @@ c. Cerrar circuito
 
 Ingrese la opción deseada: """                    
 
-impresiones = []
+#impresiones = []
 voltaje = 'V'
 serie = 'RS'
 paralelo = 'RP'
 print('\nConstructor de circuitos eléctricos\n')
 fuente = str(numero_positivo('Ingrese el valor de la fuente: '))
-#print(f'\n({fuente + voltaje})->-')
+print(f'\n({fuente + voltaje})->-')
 r_sin_tolerancia = ingresar_opcion(menu)
 print(r_sin_tolerancia)
 
@@ -110,4 +109,3 @@ print(r_sin_tolerancia)
 
 #if __name__ == '__main__':
  #   main()
-    
