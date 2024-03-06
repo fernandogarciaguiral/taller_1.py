@@ -73,7 +73,7 @@ def ingresar_opcion(menu):
                     resistencia = float(resistencia_ohmios())
                     r_cto += resistencia
                     impresion = f'{fuente + voltaje}|->-|-{serie + str(resistencia)}|->-'
-                    impresiones.append(impresion)                    
+                    #impresiones.append(impresion)                    
                     print(impresion)
                     break
                 elif opcion == 'b':
@@ -81,7 +81,7 @@ def ingresar_opcion(menu):
                     resistencia2 = float(resistencia_ohmios())
                     r_total = resistencia1*resistencia2/(resistencia1 + resistencia2)                    
                     r_cto += r_total
-                    impresiones.append(f'{fuente + voltaje}|->-|-{paralelo + str(r_total)}|->-')
+                    print(impresiones.append(f'{fuente + voltaje}|->-|-{paralelo + str(r_total)}|->-'))
                     break
                 else:
                     return impresiones
@@ -101,9 +101,9 @@ serie = 'RS'
 paralelo = 'RP'
 print('\nConstructor de circuitos eléctricos\n')
 fuente = str(numero_positivo('Ingrese el valor de la fuente: '))
-#print(impresiones.append(f'\n({fuente + voltaje})->-'))
+#print(f'\n({fuente + voltaje})->-')
 r_sin_tolerancia = ingresar_opcion(menu)
-#print(r_sin_tolerancia)
+print(r_sin_tolerancia)
 
 
 
