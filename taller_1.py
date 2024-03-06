@@ -81,7 +81,7 @@ def ingresar_opcion(menu):
                     resistencia2 = float(resistencia_ohmios())
                     r_total = resistencia1*resistencia2/(resistencia1 + resistencia2)                    
                     r_cto += r_total
-                    print(impresiones.append(f'{fuente + voltaje}|->-|-{paralelo + str(r_total)}|->-'))
+                    print(f'{fuente + voltaje}|->-|-{paralelo + str(r_total)}|->-')
                     break
                 else:
                     return impresiones
